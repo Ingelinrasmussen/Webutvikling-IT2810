@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <link href="./resources/css/index.css" type="text/css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="jquery.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Prosjekt 1</title>
+  </head>
+  
+  <!-- Header and information about the artist -->
+  <body>
+    <h1>Digitale kunstverk</h1>
+    <div class="artist">
+        <h2>Om kunstneren</h2>
+        <p>Kunstneren er kjent for sin anonymitet, og spesialiserer seg innenfor
+            digital kunst. Det er tydelig å se fra kunstverkene at det er en dyp tematikk som ligger bak.
+            Blant annet kan ballen symbolisere alle øvingene som blir gitt på NTNU, og 
+            øynene symboliserer en desperat student som prøver å holde følge. 
+            Videre ryktes det om at kunstneren har et elsk-hat forhold med Canvas ettersom det tok lang tid før 
+            hun klarte å tegne ønsket kunstverk, men etter hun fikk det til, synes hun det var litt gøy allikavel.
+            Alt vi vet om denne mystiske kunstneren er at hun blir inspirert av hunder og Shrek, samt ønsker en god karakter i faget Webutvikling. 
+            PS: Det er heller ikke uvanlig for kunstneren å lage elementer som skifter farge dersom man trykker på dem;)
+        </p>    
+    </div>
+
+    <div class="container">
+
+      <!-- SVG -->
+      <div>
+          <h3>SVG</h3> 
+          <div class="svg_box disable_select">
+              <svg width="400" height="400">
+
+              <!--Dog face and body-->
+              <ellipse id="dog_body" stroke="black" fill="khaki" cx="205" cy="370" rx="100" ry="100"/>
+              <ellipse id="dog_head" stroke="black" fill="khaki" cx="205" cy="195" rx="100" ry="100" />
+
+              <!--Eyes and eyeballs-->
+              <ellipse id="left_eye" stroke="black" fill="white" cx="160" cy="155" rx="19" ry="14"/>
+              <ellipse id="right_eye" stroke="black" fill="white" cx="244" cy="155" rx="19" ry="14"/>
+
+              <ellipse id="left_eyeball" stroke="black" fill="teal" cx="155" cy="158" rx="12" ry="10">
+                  <animateMotion 
+                  path="M 0 0 H 14 Z"
+                  dur="4.9s" repeatCount="indefinite" />
+              </ellipse>
+
+              <ellipse id="right_eyeball" stroke="black" fill="teal" cx="237" cy="158"rx="12" ry="10">
+                  <animateMotion
+                  path="M 0 0 H 14 Z"
+                  dur="4.9s" repeatCount="indefinite" />
+              </ellipse>
+
+              <!--Nose-->
+              <ellipse id="upper_nose" stroke="black" fill="black" cx="200" cy="202"rx="32" ry="12"/>
+              <ellipse id="lower_nose" stroke="black" fill="black" cx="200" cy="215" rx="12" ry="7"/>
+              
+              <!--Dog ears-->
+              <ellipse id="left_ear" stroke="black" fill="burlywood" cx="275" cy="247" rx="42" ry="94" transform="matrix(0.7 0.45 -0.5 0.6 44 -142)"/>
+              <ellipse id="right_ear" stroke="black" fill="burlywood" cx="205" cy="281" rx="42" ry="94" transform="matrix(0.6 -0.6 0.6 0.6 22 95)"/>
+
+              <!--Hair on right side of face-->
+              <line id="hair1" stroke="black" fill="none" stroke-width="3" x1="255" y1="193" x2="300" y2="168"/>
+              <line id="hair2" stroke="black" fill="none" stroke-width="3" x1="255" y1="204" x2="313" y2="205"/>
+              <line id="hair3" stroke="black" fill="none" stroke-width="3" x1="255" y1="217" x2="306" y2="240"/>
+
+              <!--Hair on left side of face-->
+              <line id="hair4" stroke="black" fill="none" stroke-width="3" x1="110" y1="168" x2="156" y2="193"/>
+              <line id="hair5" stroke="black" fill="none" stroke-width="3" x1="110" y1="205" x2="157" y2="204"/>
+              <line id="hair6" stroke="black" fill="none" stroke-width="3" x1="110" y1="240" x2="162" y2="217"/>
+              
+              <!--Mouth and teeth-->
+              <ellipse id="mouth" stroke-width="5" ry="17" rx="43" cy="240" cx="200" stroke="black" fill="none"/>
+              <rect id="tooth1" stroke="black" height="18" width="15" y="225" x="180" fill="white"/>
+              <rect id="tooth2" stroke="black" height="18" width="15" y="225" x="200" fill="white"/>
+
+              <!--Ball-->
+              <circle cx="30" cy="370" r="30" fill="skyblue" stroke="black" stroke-width="1">
+                  <animateMotion
+                      path="M 0 0 H 340 Z"
+                      dur="4.9s" repeatCount="indefinite" />
+              </circle>
+
+              </svg>
+          </div>
+      </div>
+
+      <!-- Canvas -->
+      <div>
+
+        <h3>Canvas</h3>
+        <div class="canvas_box disable_select">
+            <canvas id="myCanvas" width="400" height="400"></canvas>
+            <script src="canvas.js"></script>
+        </div>
+
+      </div>
+
+
+    </div>
+
+    <!-- Button for documentation -->
+    <div class="doc_class">
+        <button type="button" id="doc_button">
+          Klikk for dokumentasjon
+        </button>
+        æ
+    </div>
+
+    <!-- The content of the documentation -->
+    <div id="documentation" class="open" style="display:none">
+        <h1>Dokumentasjon</h1>
+
+        <h3>CSS Flexbox</h3>
+        <p>I prosjektet har jeg benyttet meg av CSS Flexbox ettersom jeg hadde noe kjennskap med det fra før. 
+            Derfor ønsket jeg å bruke CSS Flexbox for å friske opp minnet mitt, samt videreutvikle mine kunnskaper. 
+            I tillegg synes jeg det er enkelt og intuitivt å bruke for å strukturere elementer på nettsiden. 
+            Jeg brukte CSS Flexbox til å plassere to elementer (SVG-boksen og Canvas-boksen) horisontalt
+            ved siden av hverandre. Dette gjorde jeg ved å plassere dem i samme beholder med klassenavnet "container" i "index.html". 
+            Ved å bruke "display:flex" og "flex-direction:row" for ".container" i CSS-filen, fikk de to elementene den ønskede horisontale layouten.
+            Videre brukte jeg CSS Flexbox for dokumentasjonen, slik at innholdet kom under hverandre i en kolonne. For dette
+            benyttet jeg meg av "flex-direction:column". 
+        </p>
+
+        <h3>SVG og HTML5 Canvas</h3>
+        <h4>SVG</h4>
+        <p>Figuren i venstre boks er laget i SVG og er tegnet i "index.html"-filen med bruk av SVG-element som rot. 
+            Elementene er tegnet ved hjelp av forhåndsdefinerte formelementer slik som ellipse, circle, rect og line.
+            Koordinatene til de ulike elementene er hardkodet og funnet ved prøving og feiling. Animasjonen for den trillende ballen 
+            og øynene for hunden er gjort med "animateMotion"-taggen inne i elementet som skal bevege seg. For å skifte farge på hundeelementene 
+            når man trykker på dem, har jeg brukt jQuery-biblioteket. Dette er gjort i filen 
+            "jquery.js" med hjelp av elementene sine ID-er. 
+        </p>
+
+          <h4>HTML5 Canvas</h4>
+          <p>
+            For å tegne HTML5 Canvas-figuren til høyre brukte jeg Canvas API, som gir muligheten til å tegne 
+            2D grafikk ved hjelp av JavaScript. Figuren er tegnet i filen "canvas.js", og ble tegnet ved hjelp av elementer som paths, arc og ellipse. 
+            Jeg brukte stort sett de samme kordinatene på elementene i Canvas som de tilsvarende elementene i SVG. 
+            Å tegne elementene var ikke spesielt vanskelig, men interaktivitet og animasjon viste seg å være litt mer utfordrene. 
+            Dette var fordi, i motsetning til SVG, det ikke var mulig å bruke ID-er på forskjellige elementer. 
+            Hele bildet består kun av et Canvas-objekt, noe som gjør det vanskelig å lage interaksjon for et spesifikt element. 
+            For å bytte farge på hundeelementene lagde jeg derfor en funksjon som finner kordinatene på musen når den blir klikket i Canvas-boksen. 
+            Deretter lagde jeg flere if-statements for å finne ut om kordinatene er innenfor et av hundeelementene. Isåfall 
+            fjerner jeg hele tegningen i Canvas og tegner det på nytt med en ny farge på elementet som ble trykket på. 
+            I tillegg sjekker jeg hvilken farge hundeelementet er, slik at når det blir trykket på, så vil den veksle mellom 
+            grønn og tilbake til orginal. For å få til dette lagde jeg fire variabler som bestemte fargen til de ulike hundeelementene, 
+            samt gjorde at man kunne legge de til som argument i funksjonen som tegner Canvas-objektet, "draw()". Disse variablene er kalt 
+            "dog_head", "dog_body", "right_ear" og "left_ear".
+            Det var vanskelig å få kordinatene helt rett, så klikkfunksjonen er ikke helt presis.
+            Ettersom dette ikke er optimalt, er det litt overlapp mellom klikkfunksjonen på de ulike elementene, samt at 
+            elementene også vil skifte farge hvis man trykker litt utenfor dem. Hvis man 
+            for eksempel trykker på overlappet mellom hundehodet og hundekroppen, vil begge skifte farge. Dette er ikke tilfellet i SVG siden
+            klikkfunksjonen avhenger av objektet som ble trykket på, og ikke bare kordinatene til musen.
+          </p>
+          <p>
+            Videre ble animasjon i Canvas implementert ved å lage en funksjon kalt "animate()" som konstant fjerner elementene fra Canvas, 
+            og tegner elementene på nytt med nye kordinater. For å få til dette la jeg til to variabler og to ekstra argument i "draw()"-funksjonen; en for 
+            kordinatene til ballen (x) og en for øynene (y). På den måten kunne ballen og øynene skifte posisjon i tegningen. 
+            Dermed ble funksjonen for tegning av Canvas-objektet slik: "draw(x,y,dog_head,dog_body,right_ear,left_ear)". Likevel vil animasjonen 
+            slutte dersom man bytter fane, mens SVG-animasjonen vil fortsette. I dette tilfellet vil dermed ballene ikke være 
+            synkronisert. Etter å ha 
+            tegnet i både SVG og Canvas, synes jeg SVG var lettere, men Canvas var desidert gøyest.
+        </p>
+
+        <h3>jQuery</h3>
+        <p>jQuery er et JavaScript-bibliotek som gjør det enkelt å gjøre handlinger på ulike objekter basert på ID.
+            Blant annet har jeg brukt ID-en til hundekroppen (#dog_body og #dog_head) og ørene (#left_ear og #right_ear) 
+            for å endre farge til grønn når man tar i bruk klikk-event for SVG. Dette har ikke vært mulig for Canvas-elementene ettersom, som tidligere nevnt, de 
+            ikke har en unik ID. Videre har jeg brukt jQuery på dokumentasjonsknappen for å skjule/vise dokumentasjonen. Dette er 
+            implementert ved hjelp av den innebygde funksjonen ".toggle()"". 
+        </p>
+        <h3>Cross-browser testing</h3>
+        <p>
+            Siden forskjellige nettlesere har forskjellig oppførsel, er cross-browser testing viktig. Denne nettsiden har blitt
+            testet i både Google Chrome og Firefox. All funksjonalitet fungerer som det skal i begge nettleserne. Animasjonene og interkasjonene fungerer
+            for både Canvas og SVG, samt at nettsidene er responsiv når de blir skalert.
+        </p>
+
+        <h3>Informasjonskilder:</h3>
+        <ul>
+          <li>
+            <a
+            href="https://www.w3schools.com/graphics/svg_intro.asp">
+            Informasjonskilde for SVG
+          </a>
+          </li>
+          <li>
+            <a
+            href=https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial>
+            Informasjonskilde for Canvas
+          </a>
+          </li>
+          <li>
+            <a 
+            href=https://www.w3schools.com/jquery/>
+            Informasjonskilde for jQuery
+          </a>
+          </li>
+        </ul>
+        <h3>Kodesnutter:</h3>
+        <ul>
+          <li>
+            <a
+              href= https://www.geeksforgeeks.org/how-to-get-the-coordinates-of-a-mouse-click-on-a-canvas-element>
+              Finne kordinatene til museklikk i Canvas
+            </a>
+          </li>
+
+
+        </ul>
+      </div>
+
+    <!-- Another way to use jQuery
+    <script>
+        $( "#doc_button" ).click(function() {
+          $( "#documentation").toggle();
+        });
+
+  /* jQuery for å endre farge på hundekroppen i SVG */
+
+        $("#dog_head").click(function(){
+          if ($(this).attr("fill") == "khaki"){
+            $(this).attr("fill", "lawngreen");
+          } else {
+            $("#dog_head").attr("fill", "khaki");
+          }
+        });
+
+        $("#dog_body").click(function(){
+          if ($(this).attr("fill") == "khaki"){
+            $(this).attr("fill", "lawngreen");
+          } else {
+            $("#dog_body").attr("fill", "khaki");
+          }
+        });
+
+        $("#left_ear").click(function(){
+          if ($(this).attr("fill") == "burlywood"){
+            $(this).attr("fill", "lawngreen");
+          } else {
+            $("#left_ear").attr("fill", "burlywood");
+          }
+        });
+
+        $("#right_ear").click(function(){
+          if ($(this).attr("fill") == "burlywood"){
+            $(this).attr("fill", "lawngreen");
+          } else {
+            $("#right_ear").attr("fill", "burlywood");
+          }
+        });
+
+    </script> -->
+
+    
+    <!-- Footnote -->
+    <footer>
+        <p style="text-align: center">&copy; Webutvikling - IT2810, Prosjekt 1</p>
+    </footer>
+
+
+  </body>
+
+</html>

@@ -1,0 +1,83 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+    background-color:lightblue;
+    margin:10px;
+    color:black;
+    font-size:18px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.artist{
+    display:flex;
+    padding: 0 30px;
+    margin: 50px;
+    margin-bottom:10px;
+    background-color: skyblue;
+    flex-direction:column;
+    border-radius: 10px;
+    border-style: solid;
+}
+
+.disable_select{
+    user-select:none;
+    -moz-user-select:none;
+}
+
+.container{
+    flex-direction: row;
+    display: flex;
+    margin: 10px;
+    margin-bottom:10px;
+    border-radius: 10px;
+    justify-content: space-evenly;
+}
+
+.svg_box, .canvas_box{
+    background-color:rgb(189, 250, 235);
+    border-style: solid;
+}
+
+
+.doc_class{
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#doc_button{
+    font-size:20px;
+    font-family: 'Times New Roman', Times, serif;
+    width:250px;
+    height:60px;
+    border-radius: 10px;
+    padding: 0 10px;
+    background: skyblue;
+}
+
+#documentation{
+    display:flex;
+    flex-direction:column;
+    text-align:center;
+    background-color: skyblue;
+    border-radius:10px;
+    padding:200px;
+    margin-top:10px;
+    margin-bottom: 10px;
+    padding: 0 100px;
+    border-style: solid;
+    font-size:18px;
+}
+
+ul{
+    text-align: center;
+    list-style-position: inside;
+    margin-top: 0px;
+}
+
+footer{
+    background-color: lightblue;
+    margin:auto;
+}
